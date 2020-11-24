@@ -31,9 +31,6 @@ The application uses one view model for all HttpMethods which means that when po
 I have rolled my own authorisation middleware to show the basic concept of authorisation. In a real world app I would implement something like OAuth2 and use attributes to make sure every endpoint has the required permissions/roles.
 If you have a look in the "CompanyHistoryController.cs" line: 108 you will see a sudo coded example of more detailed authorisation.  
 
-if (!_securityModule.DoesUserHaveApiWriteAccess(request.header["token"]))
-            //{ throw Forbidden }
-
 
 There are some classes that extend generic types that do not implement any further functionality e.g. "SkillBusinessLogic.cs" and "SkillRepository.cs", the idea is that in the future when new features come in they can be extended easily.
 
