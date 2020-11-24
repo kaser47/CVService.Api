@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CVService.Api</name>
+    </assembly>
+    <members>
+        <member name="P:CVService.Api.WebLayer.Models.CompanyHistoryViewModel.CvId">
+            <summary>
+            The id of the cv that the company history belongs too.
+            </summary>
+            <remarks>
+            Used to link to a CV Entity
+            </remarks>
+        </member>
+        <member name="P:CVService.Api.WebLayer.Models.CompanyHistoryViewModel.Name">
+            <summary>
+            The name of the company
+            </summary>
+        </member>
+        <member name="P:CVService.Api.WebLayer.Models.CompanyHistoryViewModel.Description">
+            <summary>
+            The brief summary of work carried about at the company
+            </summary>
+        </member>
+        <member name="P:CVService.Api.WebLayer.Models.CompanyHistoryViewModel.EndDate">
+            <remarks>Please note End date cannot be earlier in time then start date.</remarks>>
+        </member>
+        <member name="P:CVService.Api.WebLayer.Models.CvViewModel.Name">
+            <summary>
+            The name of the person who the CV belongs.
+            </summary>
+        </member>
+        <member name="P:CVService.Api.WebLayer.Models.CvViewModel.EmailAddress">
+             <summary>
+             The email of the person who the CV belongs.
+             </summary>
+            <remarks>Has to be valid email format.</remarks>
+        </member>
+        <member name="P:CVService.Api.WebLayer.Models.CvViewModel.Skills">
+            <summary>
+            The list of skills that belong to this CV.
+            </summary>
+            <remarks>You cannot have multiple skills of the same name</remarks>>
+        </member>
+        <member name="P:CVService.Api.WebLayer.Models.CvViewModel.CompanyHistories">
+            <summary>
+            The list of company history information that belong to this CV.
+            </summary>
+            <remarks>You cannot have multiple company histories with no end date</remarks>>
+        </member>
+        <member name="P:CVService.Api.WebLayer.Models.SkillViewModel.CvId">
+            <summary>
+            The id of the cv that the skill belongs too.
+            </summary>
+            <remarks>
+            Used to link to a CV Entity
+            </remarks>
+        </member>
+        <member name="P:CVService.Api.WebLayer.Models.SkillViewModel.Name">
+            <summary>
+            The name of the skill e.g. C#
+            </summary>
+        </member>
+        <member name="P:CVService.Api.WebLayer.Models.SkillViewModel.MonthsExperience">
+            <summary>
+            Months experience with said skill
+            </summary>
+            <remarks>
+            50 years seemed a reasonable max.
+            </remarks>
+        </member>
+        <member name="M:CVService.Api.Controllers.CompanyHistoryController.Get">
+            <summary>
+            Returns a list of all "Company Histories" currently in the DB
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CompanyHistoryController.Get(System.Int32)">
+            <summary>
+            Gets a "Company History" based on Id
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CompanyHistoryController.Put(System.Int32,CVService.Api.WebLayer.Models.CompanyHistoryViewModel)">
+            <summary>
+            Updates a "Company History" based on Id
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CompanyHistoryController.Post(CVService.Api.WebLayer.Models.CompanyHistoryViewModel)">
+            <summary>
+            Creates a new "Company History"
+            </summary>
+            <remarks>PLEASE DO NOT PASS AN ID AS PART OF THE MODEL - For POST requests, supplying an ID will result in an error</remarks>
+        </member>
+        <member name="M:CVService.Api.Controllers.CompanyHistoryController.Delete(System.Int32)">
+            <summary>
+            Deletes a "Company History" based on Id
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.Get">
+            <summary>
+            Returns a list of all "CV"s currently in the DB
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.Get(System.Int32)">
+            <summary>
+            Gets a "CV" based on Id
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.Put(System.Int32,CVService.Api.WebLayer.Models.CvViewModel)">
+            <summary>
+            Updates a "CV" based on Id
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.Post(CVService.Api.WebLayer.Models.CvViewModel)">
+            <summary>
+            Creates a new "CV"
+            </summary>
+            <remarks>PLEASE DO NOT PASS AN ID AS PART OF THE MODEL - For POST requests, supplying an ID will result in an error</remarks>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.Delete(System.Int32)">
+            <summary>
+            Deletes a "CV" based on Id
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.GetSkills(System.Int32)">
+            <summary>
+            Returns a list of all "Skill"s currently in the DB for a specific CV
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.GetCompanyHistories(System.Int32)">
+            <summary>
+            Returns a list of all "Company Histories"s currently in the DB for a specific CV
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.GetCompanyHistory(System.Int32,System.Int32)">
+            <summary>
+            Returns a "Company History" currently in the DB for a specific CV
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.GetSkill(System.Int32,System.Int32)">
+            <summary>
+            Returns a "Skill" currently in the DB for a specific CV
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.Post(System.Int32,CVService.Api.WebLayer.Models.SkillViewModel)">
+            <summary>
+            Creates a new "Skill" for a "CV"
+            </summary>
+            <remarks>PLEASE DO NOT PASS AN ID AS PART OF THE MODEL - For POST requests, supplying an ID will result in an error</remarks>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.Post(System.Int32,CVService.Api.WebLayer.Models.CompanyHistoryViewModel)">
+            <summary>
+            Creates a new "Company History" for a "CV"
+            </summary>
+            <remarks>PLEASE DO NOT PASS AN ID AS PART OF THE MODEL - For POST requests, supplying an ID will result in an error</remarks>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.Put(System.Int32,System.Int32,CVService.Api.WebLayer.Models.SkillViewModel)">
+            <summary>
+            Updates a "Skill" for a "CV"
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.Put(System.Int32,System.Int32,CVService.Api.WebLayer.Models.CompanyHistoryViewModel)">
+            <summary>
+            Updates a "Company History" for a "CV"
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.DeleteSkill(System.Int32,System.Int32)">
+            <summary>
+            Deletes a "Skill" for a "CV"
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.CvController.DeleteCompanyHistory(System.Int32,System.Int32)">
+            <summary>
+            Deletes a "Company History" for a "CV"
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.MaintenanceController.WipeData">
+            <summary>
+            Wipes all the data from database (Used for testing)
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.MaintenanceController.CreateData">
+            <summary>
+            Creates and seeds data into the database (Used for testing)
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.SkillController.Get">
+            <summary>
+            Returns a list of all "Skill"s currently in the DB
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.SkillController.Get(System.Int32)">
+            <summary>
+            Gets a "Skill" based on Id
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.SkillController.Put(System.Int32,CVService.Api.WebLayer.Models.SkillViewModel)">
+            <summary>
+            Updates a "Skill" based on Id
+            </summary>
+        </member>
+        <member name="M:CVService.Api.Controllers.SkillController.Post(CVService.Api.WebLayer.Models.SkillViewModel)">
+            <summary>
+            Creates a new "Skill"
+            </summary>
+            <remarks>PLEASE DO NOT PASS AN ID AS PART OF THE MODEL - For POST requests, supplying an ID will result in an error</remarks>
+        </member>
+        <member name="M:CVService.Api.Controllers.SkillController.Delete(System.Int32)">
+            <summary>
+            Deletes a "Skill" based on Id.
+            </summary>
+        </member>
+    </members>
+</doc>
