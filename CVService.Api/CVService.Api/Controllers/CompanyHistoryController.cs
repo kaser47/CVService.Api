@@ -105,6 +105,7 @@ namespace CVService.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<CompanyHistoryViewModel>> Delete(int id)
         {
+            //TODO: Tech Test - See readme notes for explanation
             //if (!_securityModule.DoesUserHaveApiWriteAccess(request.header["token"]))
             //{ throw Forbidden }
 
