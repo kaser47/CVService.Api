@@ -9,6 +9,8 @@ A C# web service to store and allow manipulation of parts of users' CVs in a str
 1. Run the project
 1. You should now be presented with a Swagger API Documentation page
 1. Feel free to use swagger or postman or any other API testing solution you wish
+1. To run all the tests in the testing project make sure the API is still running
+1. Then open another copy of the solution, right click "CVService.Api.Tests" project and select "Run All Tests".
 
 **PLEASE NOTE: All requests except those to swagger or the maintenance controller need to be authorised with a token.**
 
