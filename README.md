@@ -26,6 +26,8 @@ The integration tests have been configured to run serially, it was very importan
 This will give a good end to end look at most of the API and its Endpoints.**
 
 ## Notes
+In a real-world app, the folders ending in Layer would each be its own separate .net project in the solution, for example, BusinessLogicLayer would become the CVService.BusinessLogic project. For the DataLayer in particular, this could further be separated by putting the DataLayer/Models directory into it's own project, call CVService.Domain.
+
 The application uses one view model for all HttpMethods which means that when posting the model to the web API it is possible to include the ID field in the model. This will cause an error as we want to stop this. In a production environment with a longer time frame this would be handled by either creating a separate view model for each Http Method, e.g. one for [GET], one for [POST] (that doesn’t have the Id field), [PUT], [DELETE] OR by going into the swagger config and specifically changing the response for Ids in [POST]s.
 
 I have rolled my own authorisation middleware to show the basic concept of authorisation. In a real world app I would implement something like OAuth2 and use attributes to make sure every endpoint has the required permissions/roles.
@@ -35,5 +37,6 @@ If you have a look in the "CompanyHistoryController.cs" line: 108 you will see a
 There are some classes that extend generic types that do not implement any further functionality e.g. "SkillBusinessLogic.cs" and "SkillRepository.cs", the idea is that in the future when new features come in they can be extended easily.
 
 There is a generic method in the "CvRepository.cs" called DoesEntityExistInCvAsync<T>, this is used to find if a Skill or Company History exists on a specific CV the idea behind this is if in the future more navigation properties are added to a Cv. e.g. EducationDetails or References this method can be used to see if those also exist for a specific CV. Which means the functionality only needs to be tested once.
+I have also used an XML comment as an example of how I would document methods to help others to use my code. 
 
 There are several TODO comments dotted around the solution that help explain certain decisions that were made for the demo. These all start with the following "TODO: Tech Test - "
