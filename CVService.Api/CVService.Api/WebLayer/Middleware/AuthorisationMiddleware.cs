@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Threading.Tasks;
+using CVService.Api.BusinessLogicLayer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Primitives;
 
-namespace CVService.Api
+namespace CVService.Api.WebLayer.Middleware
 {
     public sealed class AuthorisationMiddleware
     {

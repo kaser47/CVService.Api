@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Ardalis.GuardClauses;
+using CVService.Api.BusinessLogicLayer.Abstracts;
 using CVService.Api.CommonLayer.Abstracts;
 using CVService.Api.DataLayer.Abstracts;
 using CVService.Api.DataLayer.Models;
-using CVService.Api.WebLayer.Abstracts;
 
-namespace CVService.Api.WebLayer
+namespace CVService.Api.BusinessLogicLayer
 {
     //This class acts as a facade at the moment so there are no unit tests for it, if in the future there is any additional logic added then
     //unit tests should be written to test the extra logic.
-    public class CvBusinessLogic : BusinessLogic<Cv>,ICvBusinessLogic
+    public class CvBusinessLogic : BusinessLogicBase<Cv>,ICvBusinessLogic
     {
         private readonly ICvRepository _repository;
 
@@ -88,6 +88,14 @@ namespace CVService.Api.WebLayer
             return await _repository.RemoveCompanyHistory(cvId, companyHistoryId);
         }
 
+        //TODO: Tech Test - An example XML method comment to show how I would document my code.
+        /// <summary>
+        /// Checks whether or not  an entity exists inside a cv
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="cvId"></param>
+        /// <param name="entityId"></param>
+        /// <returns>Returns boolean value for whether or not entity exists in cv</returns>
         public async Task<bool> DoesEntityExistInCvAsync<TEntity>(int cvId, int entityId) where TEntity : class, IHasId, IHasCvId
         {
             Guard.Against.Default(entityId, nameof(entityId));

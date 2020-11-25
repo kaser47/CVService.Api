@@ -3,17 +3,16 @@ using System.Threading.Tasks;
 using Ardalis.GuardClauses;
 using CVService.Api.CommonLayer.Abstracts;
 using CVService.Api.DataLayer.Abstracts;
-using CVService.Api.WebLayer.Abstracts;
 
-namespace CVService.Api.WebLayer
+namespace CVService.Api.BusinessLogicLayer.Abstracts
 {
     //This class acts as a facade at the moment so there are no unit tests for it, if in the future there is any additional logic added then
     //unit tests should be written to test the extra logic.
-    public abstract class BusinessLogic<T> : ICrudBusinessLogic<T> where T : class, IHasId
+    public abstract class BusinessLogicBase<T> : ICrudBusinessLogic<T> where T : class, IHasId
     {
         private readonly IRepositoryBase<T> _repository;
 
-        protected BusinessLogic(IRepositoryBase<T> repository)
+        protected BusinessLogicBase(IRepositoryBase<T> repository)
         {
             Guard.Against.Null(repository, nameof(repository));
             _repository = repository;

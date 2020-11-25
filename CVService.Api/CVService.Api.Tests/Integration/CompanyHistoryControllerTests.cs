@@ -10,7 +10,7 @@ using Xunit;
 
 namespace CVService.Api.Tests.Integration
 {
-    [Collection("Integration")]
+    [Collection("SerialTests")]
     public class CompanyHistoryControllerTests : IntegrationTestBase
     {
 

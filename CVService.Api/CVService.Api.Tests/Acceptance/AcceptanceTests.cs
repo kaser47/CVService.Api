@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using CVService.Api.CommonLayer.Abstracts;
 using CVService.Api.Tests.Integration;
+using CVService.Api.WebLayer.Abstracts;
 using CVService.Api.WebLayer.Models;
 using RestSharp;
 using Shouldly;
@@ -10,7 +12,7 @@ using Xunit;
 
 namespace CVService.Api.Tests.Acceptance
 {
-    [Collection("Integration")]
+    [Collection("SerialTests")]
     public class AcceptanceTests : IDisposable
     {
         public AcceptanceTests()

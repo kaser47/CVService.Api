@@ -1,12 +1,17 @@
 using System;
 using System.IO;
 using System.Reflection;
+using CVService.Api.BusinessLogicLayer;
+using CVService.Api.BusinessLogicLayer.Abstracts;
 using CVService.Api.CommonLayer;
 using CVService.Api.DataLayer;
 using CVService.Api.DataLayer.Abstracts;
 using CVService.Api.DataLayer.Models;
+using CVService.Api.DataLayer.Repositories;
 using CVService.Api.WebLayer;
 using CVService.Api.WebLayer.Abstracts;
+using CVService.Api.WebLayer.Filters;
+using CVService.Api.WebLayer.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.CodeAnalysis;
@@ -29,9 +34,9 @@ namespace CVService.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase("CVDatabase"));
             //TODO: Tech Test - In production this wouldn't be using an in-memory DB. Its easy enough to change using the DBContextOptionBuilder, opt.UseSqlServer()
             //It would also be good to implement caching, which could be wrapped around the repositories as a decorator.
+            services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase("CVDatabase"));
             
             SetupDependancies(services);
 

@@ -7,7 +7,7 @@ using Xunit;
 
 namespace CVService.Api.Tests.Integration
 {
-    [Collection("Integration")]
+    [Collection("SerialTests")]
     public class AuthenticationTests : IntegrationTestBase
     {
         private readonly RestClient _client = new RestClient("https://localhost:44341/api/v1/cv");

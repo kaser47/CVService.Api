@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using CVService.Api.WebLayer.Abstracts;
 
 namespace CVService.Api.WebLayer.Models
 {
-    public class CompanyHistoryViewModel : BaseViewModel, IValidatableObject
+    public class CompanyHistoryViewModel : ViewModelBase, IValidatableObject
     {
         /// <summary>
         /// The id of the cv that the company history belongs too.

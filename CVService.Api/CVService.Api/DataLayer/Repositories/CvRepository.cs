@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Ardalis.GuardClauses;
 using CVService.Api.CommonLayer.Abstracts;
+using CVService.Api.DataLayer.Abstracts;
 using CVService.Api.DataLayer.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CVService.Api.DataLayer.Abstracts
+namespace CVService.Api.DataLayer.Repositories
 {
     //TODO: Tech Test - If this was for production I would spend some time trying to make the repository designed for testability as
     //we cannot mock extension methods easily

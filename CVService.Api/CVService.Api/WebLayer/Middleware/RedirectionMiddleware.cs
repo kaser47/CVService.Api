@@ -1,11 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace CVService.Api
+namespace CVService.Api.WebLayer.Middleware
 {
     public sealed class RedirectionMiddleware
     {
-
         private readonly RequestDelegate _next;
 
         public RedirectionMiddleware(RequestDelegate next)

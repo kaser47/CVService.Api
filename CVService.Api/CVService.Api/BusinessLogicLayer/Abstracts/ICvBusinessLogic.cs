@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using CVService.Api.CommonLayer.Abstracts;
 using CVService.Api.DataLayer.Models;
 
-namespace CVService.Api.WebLayer.Abstracts
+namespace CVService.Api.BusinessLogicLayer.Abstracts
 {
     public interface ICvBusinessLogic : ICrudBusinessLogic<Cv>
     {

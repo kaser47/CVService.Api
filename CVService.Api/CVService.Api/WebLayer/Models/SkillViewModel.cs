@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using CVService.Api.WebLayer.Abstracts;
 
 namespace CVService.Api.WebLayer.Models
 {
-    public class SkillViewModel : BaseViewModel
+    public class SkillViewModel : ViewModelBase
     {
         /// <summary>
         /// The id of the cv that the skill belongs too.

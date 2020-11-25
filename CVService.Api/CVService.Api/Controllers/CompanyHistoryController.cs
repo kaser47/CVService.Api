@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Ardalis.GuardClauses;
+using CVService.Api.BusinessLogicLayer.Abstracts;
 using CVService.Api.WebLayer;
 using CVService.Api.WebLayer.Abstracts;
 using CVService.Api.WebLayer.Models;

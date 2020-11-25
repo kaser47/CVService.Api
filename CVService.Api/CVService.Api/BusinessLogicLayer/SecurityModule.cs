@@ -1,6 +1,6 @@
 using System;
 
-namespace CVService.Api
+namespace CVService.Api.BusinessLogicLayer
 {
     //TODO: Tech Test - In the future this class could connect to a DB and return different access tokens based on
     //permissions and roles of different users.

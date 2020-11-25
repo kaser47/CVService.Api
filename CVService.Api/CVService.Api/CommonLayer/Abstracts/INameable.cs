@@ -1,4 +1,4 @@
-﻿namespace CVService.Api.WebLayer.Models
+﻿namespace CVService.Api.CommonLayer.Abstracts
 {
     public interface INameable
     {

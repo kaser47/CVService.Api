@@ -2,7 +2,7 @@
 using CVService.Api.DataLayer.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace CVService.Api.DataLayer
+namespace CVService.Api.DataLayer.Abstracts
 {
     public interface IApiContext
     {

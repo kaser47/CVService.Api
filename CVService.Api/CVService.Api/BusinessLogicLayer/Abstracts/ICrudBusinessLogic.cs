@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace CVService.Api.WebLayer.Abstracts
+namespace CVService.Api.BusinessLogicLayer.Abstracts
 {
     public interface ICrudBusinessLogic<T>
     {

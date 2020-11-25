@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using CVService.Api.WebLayer.Abstracts;
 
 namespace CVService.Api.WebLayer.Models
 {
 
-    public class CvViewModel : BaseViewModel, IValidatableObject
+    public class CvViewModel : ViewModelBase, IValidatableObject
     {
         public CvViewModel()
         {

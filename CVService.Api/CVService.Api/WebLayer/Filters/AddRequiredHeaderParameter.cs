@@ -3,7 +3,7 @@ using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace CVService.Api
+namespace CVService.Api.WebLayer.Filters
 {
     public class AddRequiredHeaderParameter : IOperationFilter
     {

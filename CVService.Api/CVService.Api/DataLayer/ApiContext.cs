@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Ardalis.GuardClauses;
 using CVService.Api.CommonLayer.Abstracts;
+using CVService.Api.DataLayer.Abstracts;
 using CVService.Api.DataLayer.Models;
 using Microsoft.EntityFrameworkCore;
 
